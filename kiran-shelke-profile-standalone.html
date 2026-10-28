@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Kiran Shelke, QA Test Engineer in Pune. Banking and fintech testing: mobile, API, SQL and automation.">
+<title>Kiran Shelke</title>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: CV-style page. Left-aligned hero, then sections with a mono label column on wide screens that stacks on phones. */
+  :root {
+    --bg: #F2F5F8;
+    --surface: #FFFFFF;
+    --ink: #12212F;
+    --muted: #4F6173;
+    --line: #D3DCE5;
+    --accent: #0B6E8A;
+    --accent-soft: #E1F0F5;
+    --pass: #1B7A4D;
+    --pass-soft: #DFF2E7;
+    --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0D1721;
+      --surface: #14212D;
+      --ink: #E7EEF5;
+      --muted: #9DB0C2;
+      --line: #263849;
+      --accent: #5EC2DD;
+      --accent-soft: #143543;
+      --pass: #72D5A2;
+      --pass-soft: #153427;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0D1721;
+    --surface: #14212D;
+    --ink: #E7EEF5;
+    --muted: #9DB0C2;
+    --line: #263849;
+    --accent: #5EC2DD;
+    --accent-soft: #143543;
+    --pass: #72D5A2;
+    --pass-soft: #153427;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    padding-block: 28px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 920px; margin-inline: auto; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  /* Top bar */
+  .topbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.02em;
+    color: var(--pass); background: var(--pass-soft);
+    padding: 5px 12px 5px 10px; border-radius: 999px;
+  }
+  .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--pass); }
+  .theme-btn {
+    font: 500 12px var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); background: transparent; border: 1px solid var(--line);
+    padding: 6px 12px; border-radius: 6px; cursor: pointer;
+  }
+  .theme-btn:hover { color: var(--ink); border-color: var(--muted); }
+
+  /* Hero */
+  .hero { display: grid; gap: 14px; padding-block: 36px 32px; }
+  .hero h1 {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(2.6rem, 8vw, 4.6rem); line-height: 1.02; letter-spacing: -0.02em;
+    margin: 0; text-wrap: balance;
+  }
+  .role { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.15rem, 3vw, 1.5rem); color: var(--accent); margin: 0; text-wrap: balance; }
+  .tagline { margin: 0; max-width: 62ch; color: var(--muted); font-size: 1.05rem; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 4px 0 0; padding: 0; list-style: none; font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+  .facts li { display: flex; gap: 8px; }
+  .facts b { color: var(--ink); font-weight: 500; }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 10px; }
+  .contact-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 10px 12px 10px 14px; min-width: 0;
+  }
+  .contact-text { min-width: 0; display: grid; }
+  .contact-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .contact-value { overflow-wrap: anywhere; font-size: 15px; }
+  .copy-btn, .link-btn {
+    flex: none; font: 500 12px var(--font-mono); letter-spacing: 0.04em;
+    color: var(--accent); background: var(--accent-soft); border: 0;
+    padding: 7px 12px; border-radius: 6px; cursor: pointer; text-decoration: none;
+  }
+  .copy-btn:hover, .link-btn:hover { filter: brightness(0.96); }
+
+  /* Sections */
+  .sec { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; padding-block: 30px; border-top: 1px solid var(--line); }
+  .sec-label { margin: 0; font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .sec-body { min-width: 0; display: grid; gap: 18px; align-content: start; }
+  @media (min-width: 780px) {
+    .sec { grid-template-columns: 170px minmax(0, 1fr); gap: 36px; }
+    .sec-label { padding-top: 4px; }
+  }
+  .sec-body p { margin: 0; max-width: 68ch; }
+
+  /* Lifecycle (a real sequence, so it is numbered) */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; counter-reset: step; }
+  .steps li {
+    counter-increment: step; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    padding: 12px 14px; display: grid; gap: 4px; font-size: 14.5px; line-height: 1.45;
+  }
+  .steps li::before { content: counter(step); font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+  .steps strong { font-weight: 600; }
+  .steps span { color: var(--muted); font-size: 13.5px; }
+
+  /* Skills */
+  .skill-groups { display: grid; gap: 16px; }
+  .skill-group { display: grid; gap: 8px; }
+  .skill-group h3 { margin: 0; font-size: 14px; font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+  .chip {
+    font-family: var(--font-mono); font-size: 12.5px; line-height: 1.3;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 5px; padding: 4px 9px;
+  }
+  .chip.accent { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+
+  /* Experience */
+  .job { display: grid; gap: 14px; }
+  .job-head { display: grid; gap: 2px; }
+  .job-head h3 { margin: 0; font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; }
+  .job-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+  .job-meta b { color: var(--ink); font-weight: 500; }
+  .dash-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .dash-list li { position: relative; padding-left: 20px; max-width: 72ch; }
+  .dash-list li::before { content: ""; position: absolute; left: 0; top: 0.75em; width: 10px; height: 2px; background: var(--accent); }
+  .job + .job { border-top: 1px dashed var(--line); padding-top: 28px; }
+
+  /* Achievements */
+  .ach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .ach { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+  .ach h3 { margin: 0; font-size: 15px; font-weight: 600; color: var(--accent); }
+  .ach p { font-size: 14.5px; color: var(--ink); }
+
+  /* Details lists */
+  .kv { display: grid; gap: 16px; margin: 0; }
+  .kv div { display: grid; gap: 2px; }
+  .kv dt { font-weight: 600; }
+  .kv dd { margin: 0; color: var(--muted); }
+
+  footer { padding-top: 26px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <span class="status">Open to work &middot; Immediate joiner</span>
+    <button class="theme-btn" id="theme-toggle" type="button">Switch theme</button>
+  </div>
+
+  <header class="hero">
+    <h1>Kiran Shelke</h1>
+    <p class="role">QA Test Engineer &mdash; Manual, API and Automation</p>
+    <p class="tagline">Four years of testing banking and fintech platforms: mobile banking on iOS and Android, a live real-time payments platform, and a large BPM migration. I check what the user sees against the API response and the database record.</p>
+    <ul class="facts">
+      <li><span>Based in</span><b>Pune, Maharashtra, India</b></li>
+      <li><span>Experience</span><b>4+ years</b></li>
+      <li><span>Domain</span><b>Banking &amp; fintech</b></li>
+    </ul>
+    <div class="contact">
+      <div class="contact-item">
+        <div class="contact-text"><span class="contact-label">Email</span><span class="contact-value" id="v-email">kpansare23@gmail.com</span></div>
+        <button class="copy-btn" type="button" data-copy="v-email">Copy</button>
+      </div>
+      <div class="contact-item">
+        <div class="contact-text"><span class="contact-label">Phone</span><span class="contact-value" id="v-phone">+91 9011346385</span></div>
+        <button class="copy-btn" type="button" data-copy="v-phone">Copy</button>
+      </div>
+      <div class="contact-item">
+        <div class="contact-text"><span class="contact-label">LinkedIn</span><span class="contact-value" id="v-linkedin">linkedin.com/in/kiranshelke</span></div>
+        <a class="link-btn" href="https://linkedin.com/in/kiranshelke" target="_blank" rel="noopener">Open</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec">
+    <h2 class="sec-label">Summary</h2>
+    <div class="sec-body">
+      <p>QA engineer with 4+ years across fintech and banking platforms. My work covers functional, regression, API, database, mobile and production validation. I use Java, Selenium WebDriver, Rest Assured, Postman, SOAPUI, MySQL, Azure DevOps and JIRA, and I work in Agile/Scrum teams.</p>
+      <p>I own the test lifecycle from strategy and case design through defect management and release sign-off, working closely with developers and stakeholders.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-label">Test lifecycle</h2>
+    <div class="sec-body">
+      <ol class="steps">
+        <li><strong>Requirements</strong><span>Analysis, entry and exit criteria</span></li>
+        <li><strong>Test design</strong><span>Scenarios, cases, test data</span></li>
+        <li><strong>Execution</strong><span>Smoke, functional, end-to-end, regression</span></li>
+        <li><strong>API and data checks</strong><span>Postman, SOAPUI, SQL on MySQL</span></li>
+        <li><strong>Defect lifecycle</strong><span>JIRA and Azure Boards, retest</span></li>
+        <li><strong>Release sign-off</strong><span>Results reported before production</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-label">Skills</h2>
+    <div class="sec-body skill-groups">
+      <div class="skill-group">
+        <h3>Quality engineering</h3>
+        <ul class="chips">
+          <li class="chip accent">Functional</li><li class="chip accent">Regression</li><li class="chip accent">Smoke</li><li class="chip accent">Sanity</li><li class="chip accent">End-to-end</li><li class="chip accent">Re-testing</li><li class="chip accent">Cross-device mobile (iOS &amp; Android)</li><li class="chip accent">Perfecto</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>API and services testing</h3>
+        <ul class="chips">
+          <li class="chip">REST APIs</li><li class="chip">Postman</li><li class="chip">SOAPUI</li><li class="chip">Rest Assured</li><li class="chip">Request/response validation</li><li class="chip">Transaction verification</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Database and reporting</h3>
+        <ul class="chips">
+          <li class="chip">MySQL</li><li class="chip">SQL</li><li class="chip">DML/DDL queries</li><li class="chip">Post-migration data integrity</li><li class="chip">Transaction record verification</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Test automation</h3>
+        <ul class="chips">
+          <li class="chip">Java</li><li class="chip">Selenium WebDriver</li><li class="chip">Rest Assured</li><li class="chip">Page Object Model</li><li class="chip">Data-driven test design</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>DevOps and scripting</h3>
+        <ul class="chips">
+          <li class="chip">Azure DevOps</li><li class="chip">CI/CD pipeline integration</li><li class="chip">Git</li><li class="chip">Pipeline monitoring and triggering</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Test and delivery tools</h3>
+        <ul class="chips">
+          <li class="chip">JIRA</li><li class="chip">Azure Boards</li><li class="chip">Agile/Scrum</li><li class="chip">SDLC</li><li class="chip">STLC</li><li class="chip">Defect lifecycle management</li><li class="chip">BDD (basic)</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Domains</h3>
+        <ul class="chips">
+          <li class="chip">Banking and financial services</li><li class="chip">Fintech</li><li class="chip">Real-time (RBA-compliant) payments</li><li class="chip">Mobile banking</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-label">Experience</h2>
+    <div class="sec-body">
+      <article class="job">
+        <div class="job-head">
+          <h3>QA Software Test Engineer</h3>
+          <div class="job-meta"><b>HCLTech</b><span>Oct 2021 &ndash; Jul 2026</span><span>Pune, India</span></div>
+        </div>
+        <ul class="chips">
+          <li class="chip accent">K2 to Camunda BPM migration</li><li class="chip accent">PayTo real-time payments</li><li class="chip accent">Mobile banking</li>
+        </ul>
+        <ul class="dash-list">
+          <li>Planned and executed the functional, manual and automation test strategy for a large-scale BPM platform migration (K2 to Camunda), defining entry and exit criteria using SDLC/STLC principles.</li>
+          <li>Validated REST web service CRUD operations and API contracts to confirm migrated workflows kept their business logic, and verified data integrity after migration with DML/DDL SQL queries against source and target databases.</li>
+          <li>Delivered automation, manual, database and web-service testing for PayTo, an RBA-compliant real-time payments platform handling live transaction flows.</li>
+          <li>Built automated test scripts in Selenium WebDriver with Java for dynamic web elements and pop-up-driven payment confirmation flows, and extended regression coverage with Rest Assured.</li>
+          <li>Validated REST APIs in Postman and SOAPUI, cross-checking the resulting transaction records directly in MySQL.</li>
+          <li>Led mobile application testing with Perfecto, keeping behaviour consistent across iOS and Android banking modules, and triggered and monitored CI/CD pipeline runs.</li>
+          <li>Investigated OCP logs and production problem tickets to speed up root-cause analysis and resolution.</li>
+          <li>Managed the full defect lifecycle in JIRA and Azure Boards, kept documentation current for stakeholders, and worked with developers in Agile Scrum sprints to track bugs and releases.</li>
+          <li>Ran smoke, functional, end-to-end, regression, re-testing and ad hoc cycles before each release across all three project workstreams.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="job-head">
+          <h3>Back Office Executive</h3>
+          <div class="job-meta"><b>IT Cube Solutions Pvt. Ltd.</b><span>Jan 2019 &ndash; Jan 2021</span><span>Pune, India</span></div>
+        </div>
+        <ul class="dash-list">
+          <li>Processed and verified medical reports and claim documentation for accuracy and completeness before client submission.</li>
+          <li>Handled back-office finance operations, including invoice verification, payment reconciliation and accurate transaction records.</li>
+          <li>Worked with internal teams to resolve discrepancies in medical and financial documents and keep turnaround on time.</li>
+          <li>Kept sensitive medical and financial records confidential and accurate, in line with company policy.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-label">Achievements</h2>
+    <div class="sec-body">
+      <div class="ach-grid">
+        <div class="ach">
+          <h3>Automation and efficiency</h3>
+          <p>Built and maintained automated regression suites across three enterprise projects (K2 to Camunda migration, PayTo real-time payments, mobile banking), cutting repetitive manual test cycles and speeding up release sign-off.</p>
+        </div>
+        <div class="ach">
+          <h3>API and data validation</h3>
+          <p>Owned end-to-end API test coverage, designing, running and maintaining Postman, SOAPUI and Rest Assured suites for a live, RBA-compliant payments platform handling real financial transactions.</p>
+        </div>
+        <div class="ach">
+          <h3>CI/CD and release integration</h3>
+          <p>Integrated automated test suites into Azure DevOps CI/CD pipelines, enabling reliable, low-friction releases for mobile banking applications.</p>
+        </div>
+        <div class="ach">
+          <h3>Cross-platform quality</h3>
+          <p>Delivered cross-device mobile QA with Perfecto and ran defect lifecycle management in JIRA and Azure Boards, keeping every active project traceable from bug discovery to resolution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-label">Education &amp; credentials</h2>
+    <div class="sec-body">
+      <dl class="kv">
+        <div><dt>Bachelor of Engineering (B.E.)</dt><dd>Pune University, Pune, Maharashtra &middot; 2015 &ndash; 2018</dd></div>
+        <div><dt>GenAI &amp; AI Agents for QA Test Automation</dt><dd>Certification &middot; Copilot and Claude</dd></div>
+        <div><dt>Languages</dt><dd>English (proficient), Hindi (proficient), Marathi (native)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-label">Roles I am after</h2>
+    <div class="sec-body">
+      <ul class="chips">
+        <li class="chip accent">QA Engineer</li><li class="chip accent">Manual QA Tester</li><li class="chip accent">QA Automation Engineer</li><li class="chip accent">SDET</li><li class="chip accent">Test Automation Engineer</li><li class="chip accent">API Test Engineer</li><li class="chip">Business Analyst (transitioning)</li>
+      </ul>
+      <p>Strengths: requirement analysis, stakeholder coordination, structured test planning, defect lifecycle governance, cross-functional collaboration, documentation, and continuous learning (GenAI tools for QA).</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Kiran Shelke &middot; QA Test Engineer &middot; Pune</span>
+    <span>Updated October 2026</span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var attr = root.getAttribute('data-theme');
+      var dark = attr === 'dark' || (!attr && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      root.setAttribute('data-theme', dark ? 'light' : 'dark');
+    });
+
+    function selectText(el) {
+      var range = document.createRange();
+      range.selectNodeContents(el);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+
+    document.querySelectorAll('.copy-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var el = document.getElementById(btn.getAttribute('data-copy'));
+        var text = el.textContent.trim();
+        var done = function (label) {
+          btn.textContent = label;
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () {
+            selectText(el); done('Selected');
+          });
+        } else {
+          selectText(el); done('Selected');
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
